@@ -27,6 +27,9 @@ public final class StringUtil {
     }
 
     public static String maskValue(String value, Integer unmaskedLength) {
+        if (value == null) {
+            return value;
+        }
         if (value.length() <= unmaskedLength) {
             return "****";
         }
